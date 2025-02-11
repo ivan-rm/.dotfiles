@@ -1,0 +1,6 @@
+theme = sonokai-default
+
+shell-integration = fish
+
+font-family= "Jetbrains Mono"
+font-size = 14
