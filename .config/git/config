@@ -8,10 +8,13 @@
 [core]
   editor = vim
   excludesfile = /home/ivan/.config/git/gitignore_global
+  autocrlf = input
 [init]
   defaultBranch = main
 [pull]
   rebase = true
+[diff]
+  external = difft 
 [alias]
   st = status -sb
   ll = log --oneline
@@ -21,11 +24,15 @@
   cm = commit -m
   rv = remote -v
   d = diff
-  dv = difftool -t nvim -d
   se = !git rev-list --all | xargs git grep -F
   tree = log --graph --decorate --pretty=oneline --abbrev-commit --all 
   unstage = reset HEAD --
-
+  # `git log` with patches shown with difftastic.
+  dl = log -p --ext-diff
+  # Show the most recent commit with difftastic.
+  ds = show --ext-diff
+  # `git diff` with difftastic.
+  dft = diff
 [help]
   autocorrect = 1
 [push]
