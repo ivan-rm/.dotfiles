@@ -1,29 +1,32 @@
 [user]
-	name = Iván Ruiz Marcos
-	email = ivanrm@norabide.com
+  name = Iván Ruiz Marcos
+  email = ivanrm@norabide.com
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 [core]
-	editor = vim
-    excludesfile = /home/ivan/.config/git/gitignore_global
+  editor = vim
+  excludesfile = /home/ivan/.config/git/gitignore_global
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
-	rebase = true
+  rebase = true
 [alias]
-	st = status -sb
-	ll = log --oneline
-	last = log -1 HEAD --stat
-    co = checkout
-    br = branch
-    cm = commit -m
-	rv = remote -v
-	d = diff
-	se = !git rev-list --all | xargs git grep -F
-	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  st = status -sb
+  ll = log --oneline
+  last = log -1 HEAD --stat
+  co = checkout
+  br = branch
+  cm = commit -m
+  rv = remote -v
+  d = diff
+  dv = difftool -t nvim -d
+  se = !git rev-list --all | xargs git grep -F
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit --all 
+  unstage = reset HEAD --
+
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [push]
-    autoSetupRemote = true
+  autoSetupRemote = true
