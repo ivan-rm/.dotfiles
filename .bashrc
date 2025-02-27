@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=32768
+HISTFILESIZE="${HISTSIZE}"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -132,28 +132,12 @@ if command -v fzf &>/dev/null; then
   source /usr/share/bash-completion/completions/fzf
   source /usr/share/doc/fzf/examples/key-bindings.bash
   # FZF theme
-  export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  --info=inline-right \
-  --ansi \
-  --layout=reverse \
-  --border=none \
-  --color=bg+:#2e3c64 \
-  --color=bg:#1f2335 \
-  --color=border:#29a4bd \
-  --color=fg:#c0caf5 \
-  --color=gutter:#1f2335 \
-  --color=header:#ff9e64 \
-  --color=hl+:#2ac3de \
-  --color=hl:#2ac3de \
-  --color=info:#545c7e \
-  --color=marker:#ff007c \
-  --color=pointer:#ff007c \
-  --color=prompt:#2ac3de \
-  --color=query:#c0caf5:regular \
-  --color=scrollbar:#29a4bd \
-  --color=separator:#ff9e64 \
-  --color=spinner:#ff007c \
-"
+  export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#c8d3f5,fg+:#d0d0d0,bg:#1e2030,bg+:#262626
+  --color=hl:#65bcff,hl+:#5fd7ff,info:#545c7e,marker:#ff007c
+  --color=prompt:#65bcff,spinner:#ff007c,pointer:#ff007c,header:#ff966c
+  --color=gutter:#1e2030,border:#589ed7,separator:#ff966c,scrollbar:#589ed7
+  --color=label:#aeaeae,query:#c8d3f5'
 fi
 
 # Launch tmux

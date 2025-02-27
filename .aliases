@@ -21,6 +21,8 @@ alias d='docker'
 alias bat='batcat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
+alias python='python3'
+alias pip='pip3'
 
 # Git 
 alias gst='git status -sb'

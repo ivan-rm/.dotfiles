@@ -54,6 +54,7 @@ if status is-interactive
     abbr lzd lazydocker
     abbr python python3
     abbr pip pip3
+    abbr zj zellij
 
     # Git 
     abbr gst 'git status -sb'
@@ -64,8 +65,4 @@ if status is-interactive
     # Managing dotfiles with a bare repo 
     abbr dotf '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-    # Launch tmux
-    if command -sq tmux && [ -z "$TMUX" ]
-        tmux attach-session -t default || tmux new-session -s default
-    end
 end
