@@ -65,4 +65,7 @@ if status is-interactive
     # Managing dotfiles with a bare repo 
     abbr dotf '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+    # Start zellij
+    #eval (zellij setup --generate-auto-start fish | string collect)
+
 end

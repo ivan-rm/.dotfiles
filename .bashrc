@@ -122,6 +122,9 @@ export SUDO_EDITOR="$EDITOR"
 # Color man pages with bat
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | batcat -p -lman'"
 
+# Add cargo to PATH
+. "$HOME/.cargo/env"
+
 # Zoxide
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init bash)"
@@ -141,9 +144,9 @@ if command -v fzf &>/dev/null; then
 fi
 
 # Launch tmux
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
-fi
+#if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+#  tmux attach-session -t default || tmux new-session -s default
+#fi
 
-# Add cargo to PATH
-. "$HOME/.cargo/env"
+# Launch Zellij
+eval "$(zellij setup --generate-auto-start bash)"

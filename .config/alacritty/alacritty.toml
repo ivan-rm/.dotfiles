@@ -11,20 +11,20 @@ args = [ "-lc", "eval (zellij setup --generate-auto-start fish | string collect)
 
 [window]
 opacity = 0.98
-
-padding.x = 14
+dimensions = { columns = 216, lines = 240 }
+padding.x = 12
 padding.y = 6
 dynamic_padding = true
 decorations = "None"
 decorations_theme_variant = "None"
 
 [font]
-normal.family = "IntoneMono NF"
-bold.family = "IntoneMono NF"
-italic.family = "IntoneMono NF"
-bold_italic.family = "IntoneMono NF"
-size = 12.6
-builtin_box_drawing = true
+normal.family = "Commit Mono Nerd Font"
+bold.family = "Commit Mono Nerd Font"
+italic.family = "Commit Mono Nerd Font"
+bold_italic.family = "Commit Mono Nerd Font"
+size = 12.5
+offset = { x = 0, y = 2 }
 
 [selection]
 save_to_clipboard = true
