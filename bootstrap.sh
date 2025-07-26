@@ -8,7 +8,7 @@ flatpak update
 
 sudo apt install -y curl trurl eza fd-find bat zoxide ripgrep fzf tldr jq vlc htop
 sudo apt install -y build-essential gdb valgrind make neovim fish stow
-sudo aptinstall -y fonts-cascadia-code fonts-jetbrains-mono
+#sudo aptinstall -y fonts-cascadia-code fonts-jetbrains-mono
 sudo apt install -y wireshark nmap virt-manager bind9-dnsutils
 #sudo apt install lazygit    # When it becomes available
 
@@ -28,3 +28,12 @@ flatpak install -y flathub org.gaphor.gaphor
 # Enable the firewall
 sudo ufw enable
 sudo ufw status
+
+# Clone the dotfiles repo and use stow to symlink the config in place
+git clone git@github.com:ivan-rm/.dotfiles.git
+
+cd .dotfiles
+for d in */ ; do
+    stow $d
+done
+
