@@ -1,0 +1,41 @@
+[user]
+  name = Iván Ruiz Marcos
+  email = ivanrm@norabide.com
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[core]
+  editor = nvim
+  autocrlf = input
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[diff]
+  external = difft 
+[alias]
+  st = status -sb
+  ll = log --oneline
+  last = log -1 HEAD --stat
+  co = checkout
+  br = branch
+  cm = commit -m
+  rv = remote -v
+  d = diff
+  se = !git rev-list --all | xargs git grep -F
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit --all 
+  unstage = reset HEAD --
+  dlog = -c diff.external=difft log --ext-diff
+  dshow = -c diff.external=difft show --ext-diff
+  ddiff = -c diff.external=difft diff
+  # `git log` with patches shown with difftastic.
+  dl = log -p --ext-diff
+  # Show the most recent commit with difftastic.
+  ds = show --ext-diff
+  # `git diff` with difftastic.
+  dft = diff
+[help]
+  autocorrect = 1
+[push]
+  autoSetupRemote = true
