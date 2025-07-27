@@ -1,5 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    
+    # Set the theme
+    source ~/.config/fish/themes/modus_operandi.fish
 
     # Welcome message
     set -g fish_greeting
