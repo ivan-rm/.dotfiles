@@ -17,7 +17,9 @@ if status is-interactive
     end
 
     if command -sq fzf
-        #fzf --fish | source
+        #fzf --fish | source    # When it becomes available
+        source /usr/share/fish/completions/fzf.fish
+        source /usr/share/doc/fzf/examples/key-bindings.fish
     end
 
     # Editor used by CLI
@@ -28,41 +30,41 @@ if status is-interactive
     set -gx MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | batcat -p -lman'"
 
     # File system
-    abbr ls 'eza -lh --group-directories-first --icons=auto'
-    abbr la 'eza -lha --group-directories-first --icons=auto'
-    abbr lt 'eza --tree --level=2 --long --icons --git'
-    abbr l 'eza -bGF --header --git --color=always --group-directories-first --icons'
-    abbr ll 'eza -la --icons --octal-permissions --group-directories-first'
-    abbr lta 'eza -a --tree --level=2 --long --icons --git'
-    abbr ff "fzf --preview 'batcat --style=numbers --color=always {}'"
-    abbr fd fdfind
-    abbr cd z
+    alias ls 'eza -lh --group-directories-first --icons=auto'
+    alias la 'eza -lha --group-directories-first --icons=auto'
+    alias lt 'eza --tree --level=2 --long --icons --git'
+    alias l 'eza -bGF --header --git --color=always --group-directories-first --icons'
+    alias ll 'eza -la --icons --octal-permissions --group-directories-first'
+    alias lta 'eza -a --tree --level=2 --long --icons --git'
+    abbr --add ff "fzf --preview 'batcat --style=numbers --color=always {}'"
+    abbr --add fd fdfind
+    alias cd z
 
     # Directories
-    abbr .. 'cd ..'
-    abbr ... 'cd ../..'
-    abbr .... 'cd ../../..'
+    abbr --add .. 'cd ..'
+    abbr --add ... 'cd ../..'
+    abbr --add .... 'cd ../../..'
 
     # Tools
-    abbr code 'code --enable-features=UseOzonePlatform --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto'
-    abbr n nvim
-    abbr g git
-    abbr d docker
-    abbr bat batcat
-    abbr lzg lazygit
-    abbr lzd lazydocker
-    abbr python python3
-    abbr pip pip3
-    #abbr zj zellij
+    alias code='code --enable-features=UseOzonePlatform --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto'
+    abbr --add n nvim
+    abbr --add g git
+    abbr --add d docker
+    alias bat 'batcat'
+    abbr --add lzg lazygit
+    abbr --add lzd lazydocker
+    abbr --add python python3
+    abbr --add pip pip3
+    #abbr --add zj zellij
 
     # Git 
-    abbr gst 'git status -sb'
-    abbr gcm 'git commit -m'
-    abbr gcam 'git commit -a -m'
-    abbr gcad 'git commit -a --amend'
+    abbr --add gst 'git status -sb'
+    abbr --add gcm 'git commit -m'
+    abbr --add gcam 'git commit -a -m'
+    abbr --add gcad 'git commit -a --amend'
 
     # Managing dotfiles with a bare repo 
-    abbr dotf '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    alias dotf '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
     # Start zellij
     #eval (zellij setup --generate-auto-start fish | string collect)
