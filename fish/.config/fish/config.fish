@@ -72,4 +72,6 @@ if status is-interactive
     # Start zellij
     #eval (zellij setup --generate-auto-start fish | string collect)
 
+
+    bind \cf 'tmux-sessionizer'
 end
