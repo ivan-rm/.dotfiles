@@ -1,6 +1,9 @@
 [Palette]
 Name=Modus-Tinted
+Primary=true
 UseSystemAccent=true
+TitlebarForeground=
+TitlebarBackground=
 
 [Light]
 Foreground=#000000
@@ -22,8 +25,8 @@ Color12=#0000ff
 Color13=#dd22dd
 Color14=#008899
 Color15=#595959
-Selection-Background=#dfa0f0
-Selection-Foreground=#000000
+CursorBackground=#dfa0f0
+CursorForeground=#000000
 [Dark]
 Foreground=#ffffff
 Background=#0d0e1c
@@ -44,6 +47,6 @@ Color12=#338fff
 Color13=#ff66ff
 Color14=#00eff0
 Color15=#989898
-Selection-Background=#7030af
-Selection-Foreground=#ffffff
+CursorBackground=#7030af
+CursorForeground=#ffffff
 
