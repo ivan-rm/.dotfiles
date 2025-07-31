@@ -2,8 +2,6 @@
 Name=Modus
 Primary=true
 UseSystemAccent=true
-TitlebarBackground=
-TitlebarForeground=
 
 [Light]
 Foreground=#000000
@@ -26,8 +24,9 @@ Color12=#0000ff
 Color13=#dd22dd
 Color14=#008899
 Color15=#595959
-CursorBackground=#dfa0f0
-CursorForeground=#000000
+CursorBackground=#000000
+CursorForeground=#ffffff
+
 [Dark]
 Foreground=#ffffff
 Background=#000000
@@ -48,5 +47,6 @@ Color12=#338fff
 Color13=#ff66ff
 Color14=#00eff0
 Color15=#989898
-CursorBackground=#7030af
-CursorForeground=#ffffff
+CursorBackground=#ffffff
+CursorForeground=#000000
+

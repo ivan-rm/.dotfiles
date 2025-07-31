@@ -2,13 +2,11 @@
 Name=Modus-Tinted
 Primary=true
 UseSystemAccent=true
-TitlebarForeground=
-TitlebarBackground=
 
 [Light]
 Foreground=#000000
 Background=#fbf7f0
-cursor-color = #000000
+Cursor=#000000
 Color0=#fbf7f0
 Color1=#a60000
 Color2=#006800
@@ -25,12 +23,13 @@ Color12=#0000ff
 Color13=#dd22dd
 Color14=#008899
 Color15=#595959
-CursorBackground=#dfa0f0
-CursorForeground=#000000
+CursorBackground=#000000
+CursorForeground=#fbf7f0
+
 [Dark]
 Foreground=#ffffff
 Background=#0d0e1c
-cursor-color = #ffffff
+Cursor=#ffffff
 Color0=#0d0e1c
 Color1=#ff5f59
 Color2=#44bc44
@@ -47,6 +46,6 @@ Color12=#338fff
 Color13=#ff66ff
 Color14=#00eff0
 Color15=#989898
-CursorBackground=#7030af
-CursorForeground=#ffffff
+CursorBackground=#ffffff
+CursorForeground=#0d0e1c
 
