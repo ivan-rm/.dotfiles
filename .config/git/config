@@ -1,0 +1,26 @@
+[user]
+  name = Iván Ruiz Marcos
+  email = ivanrm@norabide.com
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[core]
+  editor = nvim
+  autocrlf = input
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true 
+[alias]
+  st = status -sb
+  ll = log --oneline
+  last = log -1 HEAD --stat
+  co = checkout
+  br = branch
+  cm = commit -m
+  rv = remote -v
+[help]
+  autocorrect = 1
+[push]
+  autoSetupRemote = true

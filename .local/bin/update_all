@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo "Updating system packages..."
+sudo apt update
+sudo apt upgrade -y 
+
+echo "Updating flatpaks..."
+flatpak upgrade -y 
+
+echo "Updating the rust toolchain..."
+rustup upgrade
+
+echo "Installing the latest NeoVim appimage..."
+cd /tmp
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+cp nvim-linux-x86_64.appimage $HOME/.local/bin/
+rm -rf nvim-linux-x86_64.appimage
+cd -
+
+echo "Finished!"

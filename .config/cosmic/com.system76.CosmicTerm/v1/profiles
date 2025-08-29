@@ -1,0 +1,11 @@
+{
+    0: (
+        name: "Modus - bash",
+        command: "",
+        syntax_theme_dark: "Modus Vivendi",
+        syntax_theme_light: "Modus Operandi",
+        tab_title: "",
+        working_directory: "",
+        hold: false,
+    ),
+}

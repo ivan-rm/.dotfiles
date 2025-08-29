@@ -1,0 +1,13 @@
+[
+    Home,
+    Documents,
+    Downloads,
+    Music,
+    Pictures,
+    Videos,
+    Path("/home/ivan/UOC"),
+    Path("/home/ivan/Code"),
+    Path("/home/ivan/Books"),
+    Path("/home/ivan/CheatSheets"),
+    Path("/home/ivan/Papers"),
+]
