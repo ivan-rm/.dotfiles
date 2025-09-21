@@ -28,7 +28,7 @@ if status is-interactive
     abbr -a pip pip3
     abbr -a activate 'source .venv/bin/activate'
     abbr -a nve 'python3 -m venv .venv/'
-    abbr -a dotf "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    #abbr -a dotf "/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
     abbr -a ff "fzf --preview 'batcat --style=numbers --color=always {}'"
 
     abbr -a gst 'git status -sb'

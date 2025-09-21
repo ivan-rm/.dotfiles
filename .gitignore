@@ -1,0 +1,4 @@
+# Ignore all - Force to push files
+*
+# Avoid recursion issues
+.dotfiles/
